@@ -59,20 +59,4 @@ scroll.grid(row=2, column=2, rowspan= 6)
 list1.configure(yscrollcommand= scroll.set)
 scroll.configure(command= list1.yview)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window.mainloop()
