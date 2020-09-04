@@ -1,7 +1,7 @@
 from tkinter import *
 
 window = Tk()
-window.title("Library App")
+window.title("Library Database")
 
 def dict():
     return 0
@@ -30,6 +30,13 @@ e3.grid(row=1, column=1)
 e4 = Entry(window, textvariable=isbn, width=30)
 e4.grid(row=1, column=3)
 
+
+#Listbox
+
+list1 = Listbox(window, height = 8, width = 35)
+list1.grid(row= 2, column= 0, columnspan=2, rowspan= 8)
+
+
 #Buttons
 b1 = Button(window, text="View all", command=dict, height=1, width= 30, highlightbackground = "Black")
 b1.grid(row=2, column=3)
@@ -44,11 +51,13 @@ b5.grid(row=6, column=3)
 b6 = Button(window, text="Close", command=dict, height=1, width= 30, highlightbackground = "Black")
 b6.grid(row=7, column=3)
 
+#Scrollwheel
 
+scroll = Scrollbar(window, background="Black", bg="Red")
+scroll.grid(row=2, column=2, rowspan= 6)
 
-
-
-
+list1.configure(yscrollcommand= scroll.set)
+scroll.configure(command= list1.yview)
 
 
 
