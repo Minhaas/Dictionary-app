@@ -1,4 +1,5 @@
 from tkinter import *
+import backend
 
 window = Tk()
 window.title("Library Database")
@@ -38,11 +39,11 @@ list1.grid(row= 2, column= 0, columnspan=2, rowspan= 8)
 
 
 #Buttons
-b1 = Button(window, text="View all", command=dict, height=1, width= 30, highlightbackground = "Black")
+b1 = Button(window, text="View all", command=backend.viewAll(), height=1, width= 30, highlightbackground = "Black")
 b1.grid(row=2, column=3)
-b2 = Button(window, text="Search entry", command=dict, height=1, width= 30, highlightbackground = "Black")
+b2 = Button(window, text="Search entry", command=backend.search(), height=1, width= 30, highlightbackground = "Black")
 b2.grid(row=3, column=3)
-b3 = Button(window, text="Add entry", command=dict, height=1, width= 30, highlightbackground = "Black")
+b3 = Button(window, text="Add entry", command=backend.addEntry(), height=1, width= 30, highlightbackground = "Black")
 b3.grid(row=4, column=3)
 b4 = Button(window, text="Update", command=dict, height=1, width= 30, highlightbackground = "Black")
 b4.grid(row=5, column=3)
