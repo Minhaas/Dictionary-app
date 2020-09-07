@@ -13,7 +13,6 @@ def addEntry(title,author,year,isbn):
     cur.execute("INSERT INTO book VALUES (NULL,?,?,?,?)",(title,author,year,isbn))
     conn.commit()
     conn.close()
-    view()
 
 def viewAll():
     conn=sqlite3.connect("books.db")
@@ -46,7 +45,7 @@ def update(id,title,author,year,isbn):
     conn.close()
 
 connect()
-
+#addEntry("The White TIger", "Aravind adiga", 2016, 190322)
 """
 def deleteAll():
     conn=sqlite3.connect("books.db")
