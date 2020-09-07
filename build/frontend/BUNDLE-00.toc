@@ -1,0 +1,3 @@
+([('frontend',
+   '/Users/minhaas/CODING/python-code/dictionaryApp/dist/frontend',
+   'EXECUTABLE')],)
